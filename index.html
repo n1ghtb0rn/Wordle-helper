@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+
+	<title>Wordle Helper</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+
+</head>
+<body onload="initiate()">
+
+    <div id="main-container">
+
+        <h1>Wordle Helper</h1>
+
+        <input type="file" name="readfile" id="readfile" /><br>
+
+        <input type="checkbox" id="check1" name="check1" value="check1">
+        <label for="check1">Yellow letters at correct spot</label><br>
+
+        <hr>
+
+        <div id="green-letters"><h2>Green Letters</h2></div>
+
+        <div id="yellow-letters"><h2>Yellow Letters</h2></div>
+
+        <div id="gray-letters"><h2>Gray Letters</h2></div>
+
+        <br>
+
+        <button id="ready-button" onclick="ready()" style="visibility: hidden;">READY</button>
+
+        <hr>
+
+        <div id="words" style="display: flex; flex-direction: column;"></div>
+
+    </div>
+
+    <script src="logic.js"></script>
+
+</body>
+</html>
