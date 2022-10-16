@@ -119,13 +119,21 @@ const initiate = () => {
         var reader = new FileReader();
         reader.onload = function (progressEvent) {
             
-            //console.log(this.result);
             words = this.result.split(/\n/);
-            document.getElementById("ready-button").style.visibility = "visible";
             
         };
-        reader.readAsText(this.files[0]);
 
+        console.log(typeof this.files[0]);
+
+        if (typeof this.files[0] == "object") {
+            reader.readAsText(this.files[0]);
+            document.getElementById("ready-button").style.visibility = "visible";
+        }
+        else {
+            document.getElementById("ready-button").style.visibility = "hidden";
+        }
+
+        
 
     });
 };
